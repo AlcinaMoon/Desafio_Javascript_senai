@@ -31,58 +31,21 @@
     </header>
     <main>
         <div id="carousel">
+            <button id="prev" class="carousel-btn">⟨</button>
             <div class="conteiner"></div>
+            <button id="next" class="carousel-btn">⟩</button>
         </div>
-        <div id="carousel-title">
-        </div>
-        <script> /*Carrosel*/
-
-            var carouselArr = []; // Cria o array global de slides
-        
-            class Carousel {
-                constructor(imagem, titulo, link) {
-                    this.imagem = imagem;
-                    this.titulo = titulo;
-                    this.link = link;
-                }
-        
-                static Start(array) {
-                    if (!array || array.length === 0) return;
-        
-                    const carouselDiv = document.querySelector("#carousel .conteiner");
-                    const titleDiv = document.querySelector("#carousel-title");
-        
-                    let index = 0;
-        
-                    function renderSlide() {
-                        const item = array[index];
-                        carouselDiv.innerHTML = `
-                            <a href="${item.link}">
-                                <img src="img/${item.imagem}" alt="${item.titulo}" style="width:100%; border-radius:10px;">
-                            </a>
-                        `;
-                        titleDiv.innerHTML = `<p style="text-align:center; font-size:18px; margin-top:10px;">${item.titulo}</p>`;
-                    }
-        
-                    renderSlide();
-        
-                    setInterval(() => {
-                        index = (index + 1) % array.length;
-                        renderSlide();
-                    }, 3000);
-                }
-            }
-        
+        <div id="carousel-title"></div>
+    
+        <script>
             // Adiciona as imagens ao carrossel
-            carouselArr.push(new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "index.html"));
+            carouselArr.push(new Carousel("imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "index.html"));
             carouselArr.push(new Carousel("imagem_2.jpg", "Ford — a nossa história", "index.html"));
             carouselArr.push(new Carousel("imagem_3.jpg", "Nova Ford Bronco Sport 2022", "index.html"));
         
             // Inicia o carrossel
             Carousel.Start(carouselArr);
-        
         </script>
-        
     </main>
     <footer>
         <nav id="social">
