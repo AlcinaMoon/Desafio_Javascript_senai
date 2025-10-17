@@ -44,7 +44,7 @@
                 <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
                 <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
                 <select name="contato" class="fordform" required>
-                    <option selected>COMO DESEJA SER CONTATADO</option>
+                    <option value="" disabled selected>COMO DESEJA SER CONTATADO</option>
                     <option>TELEFONE</option>
                     <option>E-MAIL</option>
                 </select>
@@ -53,6 +53,14 @@
             </div>
         </div>
     </main>
+
+    <div id="agradecimentoModal" class="modal-background">
+        <div class="modal-content">
+            <h2 id="modalTitulo">Obrigada por nos contatar, [Nome do Usuário]!</h2> 
+            <p></p> <button onclick="hideModal()">Fechar</button>
+        </div>
+    </div>
+    
     <footer>
         <nav id="social">
             <ul>
