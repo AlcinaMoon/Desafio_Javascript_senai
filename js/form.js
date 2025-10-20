@@ -10,7 +10,7 @@ class contato {
     }
 }
 
-// Função para exibir o modal
+// Função para exibir 
 function showModal(nomeUsuario) {
     const modal = document.getElementById('agradecimentoModal');
     const modalTitulo = document.getElementById('modalTitulo');

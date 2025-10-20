@@ -34,7 +34,7 @@ function SetCarToCompare(el, carClass) {
     if (!(carClass instanceof Car)) {
         throw "You need set a Car Class";
     }
-//
+
     if (el.checked) {
         if (carArr.length >= 2) {
             alert("Você só pode comparar 2 veículos por vez.");
@@ -71,7 +71,7 @@ function ShowCompare() {
     if (cmp) cmp.style.display = "block";
 }
 
-// ssconde a tela de comparação
+// esconde a tela de comparação
 function HideCompare() {
     const cmp = document.getElementById("compare");
     if (cmp) cmp.style.display = "none";
